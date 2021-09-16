@@ -16,6 +16,6 @@
     }
 
     body {
-        @apply bg-background max-w-screen-xl mx-auto px-2.5 sm:px-6;
+        @apply bg-background max-w-screen-xl mx-auto px-4 sm:px-6;
     }
 }
