@@ -1,8 +1,4 @@
 import React, { ReactChild } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-
-import theme from '../styles/theme'
-import GlobalStyles from '../styles/globalStyles'
 
 import Head from '../components/Head'
 
@@ -13,16 +9,11 @@ interface ILayoutProps {
   }
 }
 
-const Wrapper = styled.div`
-  display: flex;
-`
-
 export default ({ children, location }: ILayoutProps) => {
   return (
-    <Wrapper>
-      <GlobalStyles />
+    <div>
       <Head pathname={location.pathname} />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </Wrapper>
+      {children}
+    </div>
   )
 }
