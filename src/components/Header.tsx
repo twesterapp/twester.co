@@ -6,7 +6,7 @@ import { IconExtLink } from '../components';
 import { useWindowSize } from '../hooks';
 
 export function Header() {
-    const [isMenuOpen, setMenuOpen] = React.useState(true);
+    const [isMenuOpen, setMenuOpen] = React.useState(false);
     const size = useWindowSize();
 
     const closeMenu = () => {
