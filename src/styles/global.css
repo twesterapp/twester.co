@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    * {
+        @apply text-white font-karla;
+    }
+
+    h1 {
+        @apply font-poppins text-2xl font-bold sm:text-4xl;
+    }
+
+    p {
+        @apply font-karla text-sm sm:text-base;
+    }
+
+    body {
+        @apply bg-background max-w-screen-xl mx-auto px-2.5 sm:px-6;
+    }
+}

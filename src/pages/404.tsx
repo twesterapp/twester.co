@@ -1,41 +1,34 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from '../layout/index'
+import { Layout } from '../components';
 
 interface IndexPageProps {
-  location: {
-    pathname: string
-  }
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-        description: string
-      }
-    }
-  }
+    location: {
+        pathname: string;
+    };
 }
 
-export default ({ data, location }: IndexPageProps) => {
-  const { site } = data
-  return (
-    <Layout location={location}>
-      <div>
-        <h1>{site.siteMetadata.title}</h1>
-        <p>{site.siteMetadata.description}</p>
-      </div>
-    </Layout>
-  )
+export function NotFound({ location }: IndexPageProps) {
+    return (
+        <Layout location={location}>
+            <div>
+                <h1 className="font-poppins">Ooops!</h1>
+                <p>Looks like you are lost</p>
+            </div>
+        </Layout>
+    );
 }
+
+export default NotFound;
 
 export const NotFoundQuery = graphql`
-  query NotFoundPageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
+    query NotFoundPageQuery {
+        site {
+            siteMetadata {
+                title
+                description
+            }
+        }
     }
-  }
-`
+`;

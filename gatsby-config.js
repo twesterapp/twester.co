@@ -6,7 +6,7 @@ module.exports = {
     description: `Twitch channel points without watching Twitch!`,
     siteUrl: `https://twester.co/`,
     language: `en`,
-    color: `#00171F`,
+    color: `#00A8E8`,
     twitter: 'ceoshikhar',
   },
   plugins: [
@@ -46,6 +46,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
