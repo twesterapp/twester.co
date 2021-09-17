@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Header, Layout } from '../components';
-import { Hero, Features } from '../sections';
+import { Hero, Features, HowItWorks } from '../sections';
 
 interface IndexPageProps {
     location: {
@@ -15,6 +15,7 @@ export function IndexPage({ location }: IndexPageProps) {
             <Header />
             <Hero />
             <Features />
+            <HowItWorks />
         </Layout>
     );
 }

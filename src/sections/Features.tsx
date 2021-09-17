@@ -1,18 +1,14 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-const featureMain = `bg-primary pt-3 pb-6 md:pt-6 md:pb-12 mt-12 mb-6 md:mt-24 md:mb-12`;
-const featureList = `mt-3 list-disc list-inside text-sm md:text-base`;
-const featureScreenshot = `border border-primary drop-shadow-screenshot`;
-
 export function Features() {
     return (
         <div id="features">
             <section>
-                <main className={featureMain}>
+                <main className="section-main">
                     <div className="content-spacing">
                         <h2 className="text-center">Unlimited Streamers</h2>
-                        <ul className={featureList}>
+                        <ul className="section-list">
                             <li>
                                 Add as many streamers you want and Twester will
                                 watch streamers* that are live and harvest
@@ -30,7 +26,7 @@ export function Features() {
 
                 <aside className="content-wrapper content-spacing">
                     <StaticImage
-                        className={featureScreenshot}
+                        className="section-screenshot"
                         src="../images/twester_streamers_tab.png"
                         alt="Twester streamers tab screenshot"
                         placeholder="blurred"
@@ -39,10 +35,10 @@ export function Features() {
             </section>
 
             <section>
-                <main className={featureMain}>
+                <main className="section-main">
                     <div className="content-spacing">
                         <h2 className="text-center">Minimal Dashboard</h2>
-                        <ul className={featureList}>
+                        <ul className="section-list">
                             <li>
                                 Click a button to play/pause Twester’s Watcher
                             </li>
@@ -63,7 +59,7 @@ export function Features() {
 
                 <aside className="content-wrapper content-spacing">
                     <StaticImage
-                        className={featureScreenshot}
+                        className="section-screenshot"
                         src="../images/twester_home_tab.png"
                         alt="Twester home tab screenshot"
                         placeholder="blurred"
@@ -71,10 +67,10 @@ export function Features() {
                 </aside>
             </section>
             <section>
-                <main className={featureMain}>
+                <main className="section-main">
                     <div className="content-spacing">
                         <h2 className="text-center">Features in Future</h2>
-                        <ul className={featureList}>
+                        <ul className="section-list">
                             <li>
                                 Predictions - Twester will make predictions
                                 based on your preferences.

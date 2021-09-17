@@ -48,7 +48,7 @@ export function Header() {
             <ul
                 className={`${
                     !isMenuOpen && 'hidden'
-                } fixed w-screen h-screen top-0 left-0 text-xl flex flex-col gap-y-4
+                } fixed w-screen h-screen top-0 left-0 z-50 text-xl flex flex-col gap-y-4
                 justify-center items-center bg-background2 sm:static sm:text-base
                 sm:bg-transparent sm:w-max sm:h-auto sm:flex sm:flex-row sm:gap-x-5`}
             >

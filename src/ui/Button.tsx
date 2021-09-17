@@ -14,7 +14,6 @@ export function Button({
     className = '',
     ...rest
 }: ButtonProps) {
-    console.log({ variant });
     const Icon = icon || null;
     let buttonClasses =
         'flex items-center bg-primary py-3 px-6 font-bold rounded-xl';

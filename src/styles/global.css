@@ -31,7 +31,15 @@
         @apply mx-auto px-4 sm:px-6;
     }
 
-    .feature-heading-wrapper {
+    .section-main {
         @apply bg-primary pt-3 pb-6 md:pt-6 md:pb-12 mt-12 mb-6 md:mt-24 md:mb-12;
+    }
+
+    .section-list {
+        @apply mt-3 list-disc list-inside text-sm md:text-base;
+    }
+
+    .section-screenshot {
+        @apply border border-primary drop-shadow-screenshot;
     }
 }
