@@ -4,7 +4,7 @@ export function HowItWorks() {
     return (
         <section id="how-it-works">
             <main className="section-main bg-background">
-                <div className="content-spacing">
+                <div className="content-wrapper content-spacing">
                     <h2 className="text-center">How it works?</h2>
                     <ul className="section-list">
                         <li>

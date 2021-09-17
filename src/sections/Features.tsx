@@ -6,7 +6,7 @@ export function Features() {
         <div id="features">
             <section>
                 <main className="section-main">
-                    <div className="content-spacing">
+                    <div className="content-wrapper content-spacing">
                         <h2 className="text-center">Unlimited Streamers</h2>
                         <ul className="section-list">
                             <li>
@@ -36,7 +36,7 @@ export function Features() {
 
             <section>
                 <main className="section-main">
-                    <div className="content-spacing">
+                    <div className="content-wrapper content-spacing">
                         <h2 className="text-center">Minimal Dashboard</h2>
                         <ul className="section-list">
                             <li>
@@ -68,7 +68,7 @@ export function Features() {
             </section>
             <section>
                 <main className="section-main">
-                    <div className="content-spacing">
+                    <div className="content-wrapper content-spacing">
                         <h2 className="text-center">
                             Features to come in future
                         </h2>
