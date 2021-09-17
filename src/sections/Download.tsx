@@ -5,7 +5,7 @@ export function Download() {
     return (
         <section id="download">
             <main className="section-main bg-secondary mb-0">
-                <div className="content-wrapepr content-spacing">
+                <div className="content-wrapper content-spacing">
                     <h2 className="text-center text-alter">Download</h2>
                     <p className="text-center text-alter mt-2">
                         Twester is developed out in the open on our GitHub page.
