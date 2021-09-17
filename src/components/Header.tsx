@@ -69,7 +69,7 @@ export function Header() {
                     <Link to="/#how-it-works">How it works?</Link>
                 </li>
                 <li className={linkHoverStyle} onClick={closeMenu}>
-                    <Link to="/#downloads">Download</Link>
+                    <Link to="/#download">Download</Link>
                 </li>
                 <li className={linkHoverStyle} onClick={closeMenu}>
                     <a

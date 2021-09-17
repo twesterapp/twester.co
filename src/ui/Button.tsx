@@ -16,7 +16,7 @@ export function Button({
 }: ButtonProps) {
     const Icon = icon || null;
     let buttonClasses =
-        'flex items-center bg-primary py-3 px-6 font-bold rounded-xl';
+        'flex items-center justify-center bg-primary py-3 px-6 font-bold rounded-xl';
 
     if (variant === 'secondary') {
         buttonClasses += ' bg-alter text-white';

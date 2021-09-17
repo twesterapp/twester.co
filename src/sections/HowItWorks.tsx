@@ -14,7 +14,7 @@ export function HowItWorks() {
                         </li>
                         <li>
                             Twester earns channel points for the following
-                            <ul className="section-list mt-0 ml-3">
+                            <ul className="section-list mt-0 ml-4 sm:ml-6">
                                 <li>Watching</li>
                                 <li>
                                     Active watching (bonus redeemed by click)
