@@ -29,7 +29,7 @@ export function Header() {
     }, [size.width]);
 
     return (
-        <div className="flex justify-between items-center mt-2 sm:mt-3">
+        <div className="content-wrapper content-spacing flex justify-between items-center mt-2 sm:mt-3">
             <Link to="/">
                 <StaticImage
                     className="w-10 h-10 sm:w-12 sm:h-12"
@@ -40,7 +40,7 @@ export function Header() {
             </Link>
 
             {!isMenuOpen && (
-                <button onClick={openMenu}>
+                <button onClick={openMenu} aria-label="open navigation menu">
                     <IconMenu size={32} className="sm:hidden" />
                 </button>
             )}
@@ -55,7 +55,8 @@ export function Header() {
                 {isMenuOpen && (
                     <button
                         onClick={closeMenu}
-                        className="fixed top-2 right-2.5"
+                        className="fixed top-2.5 right-4"
+                        aria-label="close navigation menu"
                     >
                         <IconClose size={36} className="sm:hidden" />
                     </button>

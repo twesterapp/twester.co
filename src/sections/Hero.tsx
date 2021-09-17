@@ -7,12 +7,12 @@ import { Link } from 'gatsby';
 export function Hero() {
     return (
         <section
-            role="hero"
-            className="mt-4 sm:mt-16 flex flex-col lg:flex-row items-center"
+            id="hero"
+            className="content-wrapper content-spacing mt-4 sm:mt-16 flex flex-col lg:flex-row items-center justify-between lg:space-x-9 space-y-9 lg:space-y-0"
         >
             <main
                 style={{ maxWidth: '472px' }}
-                className="text-center flex flex-col items-center lg:mr-9"
+                className="text-center flex flex-col items-center"
             >
                 <h1 className="text-secondary">
                     Twitch channel points without watching Twitch!
@@ -32,7 +32,7 @@ export function Hero() {
             <aside>
                 <StaticImage
                     style={{ maxWidth: '722px' }}
-                    className="border border-primary drop-shadow-screenshot mt-9 lg:mt-0"
+                    className="border border-primary drop-shadow-screenshot"
                     src="../images/twester_home_tab.png"
                     alt="Twester home tab screenshot"
                     placeholder="blurred"
