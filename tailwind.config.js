@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false,
   theme: {
@@ -16,7 +17,11 @@ module.exports = {
       karla: ['Karla', 'sans-serif'],
       poppins: ['Poppins', 'sans-serif'],
     },
-    extend: {},
+     extend: {
+       dropShadow: {
+         'screenshot': '0px 16px 40px rgba(0, 168, 232, 0.2)',
+       }
+     }
   },
   variants: {
     extend: {},

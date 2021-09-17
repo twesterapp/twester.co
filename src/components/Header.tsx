@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IconClose, IconMenu } from '../components';
-import { IconExtLink } from '../components';
+import { IconClose, IconMenu, IconExtLink } from '../ui';
 import { useWindowSize } from '../hooks';
 
 export function Header() {
