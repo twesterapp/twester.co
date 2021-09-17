@@ -69,7 +69,9 @@ export function Features() {
             <section>
                 <main className="section-main">
                     <div className="content-spacing">
-                        <h2 className="text-center">Features in Future</h2>
+                        <h2 className="text-center">
+                            Features to come in future
+                        </h2>
                         <ul className="section-list">
                             <li>
                                 Predictions - Twester will make predictions

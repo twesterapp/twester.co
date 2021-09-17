@@ -25,7 +25,10 @@ export function Hero() {
                 <Button icon={IconWindows} className="mt-12">
                     Download for Windows
                 </Button>
-                <Link to="/#download" className="text-primary mt-3">
+                <Link
+                    to="/#download"
+                    className="text-primary mt-3 hover:underline"
+                >
                     other platforms
                 </Link>
             </main>
