@@ -8,9 +8,15 @@ export function HowItWorks() {
                     <h2 className="text-center">How it works?</h2>
                     <ul className="section-list">
                         <li>
-                            Twitch rewards channel points for a lot of reasons.
-                            Twester earns channel points by mainly “watching” a
-                            streamer.
+                            Twitch rewards channel points for a lot of{' '}
+                            <a
+                                className="text-primary hover:underline"
+                                href="https://help.twitch.tv/s/article/channel-points-guide?language=en_US#viewers"
+                            >
+                                reasons
+                            </a>
+                            . Twester earns channel points by mainly “watching”
+                            a streamer.
                         </li>
                         <li>
                             Twester earns channel points for the following
