@@ -1,8 +1,9 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { Button, IconWindows } from '../ui';
 import { Link } from 'gatsby';
+import { DownloadButton } from '../components';
+import { getOSName } from '../utils';
 
 export function Hero() {
     return (
@@ -22,9 +23,11 @@ export function Hero() {
                     <br />
                     Free & Open Source 🎉
                 </p>
-                <Button icon={IconWindows} className="mt-12">
-                    Download for Windows
-                </Button>
+                <DownloadButton
+                    addPrefix={true}
+                    os={getOSName()}
+                    className="mt-12"
+                />
                 <Link
                     to="/#download"
                     className="text-primary mt-3 hover:underline"
