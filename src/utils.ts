@@ -1,5 +1,5 @@
 type Platform = 'web' | 'ios' | 'android';
-export type OS = 'windows' | 'linux' | 'macos';
+export type OS = 'Windows' | 'Linux' | 'macOS';
 
 function getPlatform(): Platform {
     const userAgent =
@@ -18,20 +18,20 @@ function getPlatform(): Platform {
     return 'web';
 }
 
-export function getOSName(): OS {
+export function getOSName(): OS | '' {
     const os = getPlatform();
 
     // On mobile we will default to `windows`
-    if (os === 'ios' || os === 'android') return 'windows';
+    if (os === 'ios' || os === 'android') return 'Windows';
 
     const platform =
         typeof navigator === 'undefined'
             ? ''
             : `${navigator.platform || ''}`.toLowerCase().trim();
 
-    if (platform.startsWith('mac')) return 'macos';
-    if (platform.startsWith('win')) return 'windows';
-    if (platform.startsWith('linux')) return 'linux';
+    if (platform.startsWith('mac')) return 'macOS';
+    if (platform.startsWith('linux')) return 'Linux';
+    if (platform.startsWith('win')) return 'Windows';
 
-    return 'windows';
+    return '';
 }

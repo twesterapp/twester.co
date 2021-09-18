@@ -2,10 +2,12 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { Link } from 'gatsby';
-import { DownloadButton } from '../components';
 import { getOSName } from '../utils';
+import { Button } from '../ui';
 
 export function Hero() {
+    const os = getOSName();
+
     return (
         <section
             id="hero"
@@ -23,11 +25,9 @@ export function Hero() {
                     <br />
                     Free & Open Source 🎉
                 </p>
-                <DownloadButton
-                    addPrefix={true}
-                    os={getOSName()}
-                    className="mt-12"
-                />
+                <Button className="mt-12">{`Download for ${
+                    os ? os : 'Free'
+                }`}</Button>
                 <Link
                     to="/#download"
                     className="text-primary mt-3 hover:underline"

@@ -1,6 +1,5 @@
 import React from 'react';
-import { DownloadButton } from '../components';
-import { Button, IconGithub } from '../ui';
+import { Button, IconApple, IconGithub, IconLinux, IconWindows } from '../ui';
 
 export function Download() {
     return (
@@ -14,9 +13,15 @@ export function Download() {
                         report issues or just check the source code there!
                     </p>
                     <div className="flex flex-col sm:justify-center sm:flex-row space-y-3 sm:space-y-0 sm:space-x-2 md:space-x-8 mt-6 sm:mt-9">
-                        <DownloadButton os="windows" variant="secondary" />
-                        <DownloadButton os="linux" variant="secondary" />
-                        <DownloadButton os="macos" variant="secondary" />
+                        <Button icon={IconWindows} variant="secondary">
+                            Windows
+                        </Button>
+                        <Button icon={IconLinux} variant="secondary">
+                            Linux
+                        </Button>
+                        <Button icon={IconApple} variant="secondary">
+                            macOS
+                        </Button>
                         <a
                             href="https://github.com/twesterapp/twester"
                             target="_blank"
