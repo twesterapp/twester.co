@@ -5,6 +5,7 @@ interface Lock {
     setScrollLocked: Dispatch<SetStateAction<boolean>>;
 }
 
+// @see yoinked from https://github.com/mantinedev/mantine/blob/master/src/mantine-hooks/src/use-scroll-lock/use-scroll-lock.ts
 export function useScrollLock(lock?: boolean): Lock {
     const [scrollLocked, setScrollLocked] = useState(lock || false);
 

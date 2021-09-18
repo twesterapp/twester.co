@@ -5,6 +5,7 @@ interface Size {
     height: number | undefined;
 }
 
+// @see yoinked from https://usehooks.com/useWindowSize
 export function useWindowSize(): Size {
     const [windowSize, setWindowSize] = useState<Size>({
         width: undefined,
