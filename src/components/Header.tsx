@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IconClose, IconMenu, IconExtLink } from '../ui';
-import { useWindowSize } from '../hooks';
+import { useScrollLock, useWindowSize } from '../hooks';
 
 export function Header() {
     const [isMenuOpen, setMenuOpen] = React.useState(false);
     const size = useWindowSize();
+    useScrollLock(isMenuOpen);
 
     const closeMenu = () => {
         if (isMenuOpen) {
