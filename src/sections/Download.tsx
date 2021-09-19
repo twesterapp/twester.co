@@ -1,5 +1,11 @@
 import React from 'react';
 import { Button, IconApple, IconGithub, IconLinux, IconWindows } from '../ui';
+import {
+    GITHUB_LINK,
+    WINDOWS_LINK,
+    LINUX_LINK,
+    MACOS_LINK,
+} from '../constants';
 
 export function Download() {
     return (
@@ -13,28 +19,34 @@ export function Download() {
                         or just check the source code there!
                     </p>
                     <div className="flex flex-col sm:justify-center sm:flex-row space-y-3 sm:space-y-0 sm:space-x-2 md:space-x-8 mt-6 sm:mt-9">
-                        <Button icon={IconWindows} variant="secondary">
+                        <Button
+                            icon={IconWindows}
+                            variant="secondary"
+                            href={WINDOWS_LINK}
+                        >
                             Windows
                         </Button>
-                        <Button icon={IconLinux} variant="secondary">
+                        <Button
+                            icon={IconLinux}
+                            variant="secondary"
+                            href={LINUX_LINK}
+                        >
                             Linux
                         </Button>
-                        <Button icon={IconApple} variant="secondary">
+                        <Button
+                            icon={IconApple}
+                            variant="secondary"
+                            href={MACOS_LINK}
+                        >
                             macOS
                         </Button>
-                        <a
-                            href="https://github.com/twesterapp/twester"
-                            target="_blank"
-                            rel="noreferrer"
+                        <Button
+                            icon={IconGithub}
+                            variant="secondary"
+                            href={GITHUB_LINK}
                         >
-                            <Button
-                                icon={IconGithub}
-                                variant="secondary"
-                                className="w-full"
-                            >
-                                GitHub
-                            </Button>
-                        </a>
+                            GitHub
+                        </Button>
                     </div>
                 </div>
             </main>

@@ -5,6 +5,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     icon?: IconType;
     children?: ReactNode;
     variant?: 'primary' | 'secondary';
+    href?: string;
 }
 
 export function Button({
@@ -12,6 +13,7 @@ export function Button({
     children,
     variant = 'primary',
     className = '',
+    href = '',
     ...rest
 }: ButtonProps) {
     const Icon = icon || null;
@@ -26,10 +28,20 @@ export function Button({
 
     buttonClasses += ' ' + className;
 
-    return (
+    const button = (
         <button className={buttonClasses} {...rest}>
             {Icon && <Icon size={32} className="mr-2" />}
             {children}
         </button>
     );
+
+    if (href) {
+        return (
+            <a href={href} target="_blank" rel="noreferrer">
+                {button}
+            </a>
+        );
+    }
+
+    return button;
 }

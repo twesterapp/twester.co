@@ -5,8 +5,18 @@ import { Link } from 'gatsby';
 import { getOSName } from '../utils';
 import { Button } from '../ui';
 
+import { WINDOWS_LINK, LINUX_LINK, MACOS_LINK } from '../constants';
+
 export function Hero() {
     const os = getOSName();
+    const href =
+        os === 'Windows'
+            ? WINDOWS_LINK
+            : os === 'Linux'
+            ? LINUX_LINK
+            : os === 'macOS'
+            ? MACOS_LINK
+            : '';
 
     return (
         <section
@@ -25,7 +35,7 @@ export function Hero() {
                     <br />
                     Free & Open Source 🎉
                 </p>
-                <Button className="mt-12">{`Download for ${
+                <Button className="mt-12" href={href}>{`Download for ${
                     os ? os : 'Free'
                 }`}</Button>
                 <Link
