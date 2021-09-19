@@ -8,15 +8,25 @@ import { Button } from '../ui';
 import { WINDOWS_LINK, LINUX_LINK, MACOS_LINK } from '../constants';
 
 export function Hero() {
-    const os = getOSName();
-    const href =
-        os === 'Windows'
-            ? WINDOWS_LINK
-            : os === 'Linux'
-            ? LINUX_LINK
-            : os === 'macOS'
-            ? MACOS_LINK
-            : '';
+    const [OS, setOS] = React.useState(getOSName());
+    const [downloadLink, setDownloadLink] = React.useState('');
+
+    React.useEffect(() => {
+        setOS(getOSName());
+    }, []);
+
+    React.useEffect(() => {
+        const link =
+            OS === 'Windows'
+                ? WINDOWS_LINK
+                : OS === 'Linux'
+                ? LINUX_LINK
+                : OS === 'macOS'
+                ? MACOS_LINK
+                : '';
+
+        setDownloadLink(link);
+    }, [OS]);
 
     return (
         <section
@@ -35,8 +45,8 @@ export function Hero() {
                     <br />
                     Free & Open Source 🎉
                 </p>
-                <Button className="mt-12" href={href}>{`Download for ${
-                    os ? os : 'Free'
+                <Button className="mt-12" href={downloadLink}>{`Download for ${
+                    OS ? OS : 'Free'
                 }`}</Button>
                 <Link
                     to="/#download"
