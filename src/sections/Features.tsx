@@ -42,11 +42,13 @@ export function Features() {
             <section>
                 <main className="section-main">
                     <div className="content-wrapper content-spacing">
-                        <h2 className="text-center">Minimal Dashboard</h2>
+                        <h2 className="text-center">
+                            Minimal and Intuitive UI
+                        </h2>
                         <ul className="section-list">
                             <li>
-                                <strong>Minimal and Intuitive UI</strong>. Start
-                                and pause Twester will a click of a button.
+                                <strong>Minimal dashboard</strong>. Start and
+                                pause Twester will a click of a button.
                             </li>
                             <li>
                                 <strong>Event logs</strong> about all the things
