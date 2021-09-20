@@ -6,6 +6,10 @@ module.exports = [
         component: path.resolve(`src/pages/index.tsx`),
     },
     {
+        path: '/github',
+        component: path.resolve(`src/pages/github.tsx`),
+    },
+    {
         path: '/404/',
         component: path.resolve(`src/pages/404.tsx`),
     },
