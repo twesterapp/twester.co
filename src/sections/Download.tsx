@@ -61,7 +61,7 @@ export function Download() {
                     </p>
                     <div className="flex flex-col sm:justify-center sm:flex-row space-y-3 sm:space-y-0 sm:space-x-2 md:space-x-8 mt-6 sm:mt-9">
                         <Button
-                            className="w-full"
+                            className="w-full sm:w-min"
                             icon={IconWindows}
                             variant="secondary"
                             href={links.windows}
@@ -69,7 +69,7 @@ export function Download() {
                             Windows
                         </Button>
                         <Button
-                            className="w-full"
+                            className="w-full sm:w-min"
                             icon={IconLinux}
                             variant="secondary"
                             href={links.linux}
@@ -77,7 +77,7 @@ export function Download() {
                             Linux
                         </Button>
                         <Button
-                            className="w-full"
+                            className="w-full sm:w-min"
                             icon={IconApple}
                             variant="secondary"
                             href={links.macos}
@@ -85,7 +85,7 @@ export function Download() {
                             macOS
                         </Button>
                         <Button
-                            className="w-full"
+                            className="w-full sm:w-min"
                             icon={IconGithub}
                             variant="secondary"
                             href={GITHUB_REPO_LINK}
