@@ -21,14 +21,22 @@ function Github() {
             const appleLink = await getDownloadLink('macOS');
 
             setData({
-                latestVersion,
-                windowsCount,
-                linuxCount,
-                appleCount,
-                totalCount,
-                windowsLink,
-                linuxLink,
-                appleLink,
+                latest_release_version: latestVersion,
+                download_count: {
+                    latest_release: {
+                        windows: windowsCount,
+                        linux: linuxCount,
+                        macos: appleCount,
+                    },
+                    all_time_total: totalCount,
+                },
+                download_link: {
+                    latest_release: {
+                        windows: windowsLink,
+                        linux: linuxLink,
+                        macos: appleLink,
+                    },
+                },
             });
         };
 
@@ -36,10 +44,10 @@ function Github() {
     }, []);
 
     return (
-        <>
-            <h1>Github</h1>
+        <div className="content-wrapper content-spacing h-screen flex flex-col items-center">
+            <h1 className="py-4">GitHub Releases Stats</h1>
             {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-        </>
+        </div>
     );
 }
 
