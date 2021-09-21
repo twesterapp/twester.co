@@ -65,6 +65,8 @@ function getAssetExtension(os: OS): string {
     } else if (os === 'macOS') {
         return '.dmg';
     }
+
+    return '';
 }
 
 // If a `tag` is not provided, we will fetch data for the `latest` release.
@@ -88,7 +90,7 @@ export async function getDownloadLink(os: OS, tag?: string) {
     const release = await fetchRelease(tag);
 
     if (!release) {
-        return;
+        return '';
     }
 
     const assets = release.assets;
@@ -98,13 +100,15 @@ export async function getDownloadLink(os: OS, tag?: string) {
             return asset.browser_download_url;
         }
     }
+
+    return '';
 }
 
 export async function getLatestReleaseVersion() {
     const release = await fetchRelease();
 
     if (!release) {
-        return;
+        return '';
     }
 
     return release.tag_name;

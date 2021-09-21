@@ -12,10 +12,14 @@ interface IndexPageProps {
 export function NotFound({ location }: IndexPageProps) {
     return (
         <Layout location={location}>
-            <div>
-                <h1 className="font-poppins">Ooops!</h1>
-                <p>Looks like you are lost</p>
-            </div>
+            <section className="h-screen flex items-center justify-center">
+                <main className="text-center">
+                    <h1 className="font-poppins py-4">Ooops! - 404</h1>
+                    <p>
+                        Looks like you are lost. This page could not be found.
+                    </p>
+                </main>
+            </section>
         </Layout>
     );
 }

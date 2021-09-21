@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import { getOSName } from '../utils';
 import { Button } from '../ui';
 
-import { WINDOWS_LINK, LINUX_LINK, MACOS_LINK } from '../constants';
+import { getDownloadLink } from '../github';
 
 export function Hero() {
     const [OS, setOS] = React.useState(getOSName());
@@ -16,16 +16,12 @@ export function Hero() {
     }, []);
 
     React.useEffect(() => {
-        const link =
-            OS === 'Windows'
-                ? WINDOWS_LINK
-                : OS === 'Linux'
-                ? LINUX_LINK
-                : OS === 'macOS'
-                ? MACOS_LINK
-                : '';
+        const fetchAndSetDownloadLink = async () => {
+            const link = await getDownloadLink(OS);
+            setDownloadLink(link);
+        };
 
-        setDownloadLink(link);
+        fetchAndSetDownloadLink();
     }, [OS]);
 
     return (

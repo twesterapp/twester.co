@@ -18,7 +18,7 @@ function getPlatform(): Platform {
     return 'web';
 }
 
-export function getOSName(): OS | '' {
+export function getOSName(): OS {
     const os = getPlatform();
 
     // On mobile we will default to `windows`
@@ -33,5 +33,5 @@ export function getOSName(): OS | '' {
     if (platform.startsWith('linux')) return 'Linux';
     if (platform.startsWith('win')) return 'Windows';
 
-    return '';
+    return 'Windows';
 }
