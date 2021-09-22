@@ -12,8 +12,8 @@ export function Footer() {
                         rel="noreferrer"
                         className="hover:underline"
                     >
-                        <b className="text-alter">@ceoshikhar</b>{' '}
-                    </a>
+                        <b className="text-alter">@ceoshikhar</b>
+                    </a>{' '}
                     with love in India
                 </p>
             </div>
