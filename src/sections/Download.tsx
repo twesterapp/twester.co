@@ -93,6 +93,10 @@ export function Download() {
                             GitHub
                         </Button>
                     </div>
+                    <p className="text-alter text-center mt-4">
+                        *macOS users will have to manually update to newer
+                        version. No auto-update support currently.
+                    </p>
                 </div>
             </main>
         </section>

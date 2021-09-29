@@ -50,6 +50,12 @@ export function Hero() {
                 >
                     other platforms
                 </Link>
+                {OS === 'macOS' && (
+                    <p className="text-center mt-4">
+                        *macOS users will have to manually update to newer
+                        version. No auto-update support currently.
+                    </p>
+                )}
             </main>
             <aside>
                 <StaticImage
